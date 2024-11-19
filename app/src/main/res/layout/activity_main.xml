@@ -56,7 +56,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_AC"
                 style="@style/Gray.Button"
-                android:onClick="onOperationClick"
+                android:onClick="onNumberClick"
                 android:text="@string/ac" />
 
             <com.google.android.material.button.MaterialButton

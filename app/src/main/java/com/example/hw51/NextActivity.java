@@ -25,8 +25,8 @@ public class NextActivity extends AppCompatActivity {
         setContentView(R.layout.activity_next);
         TextView resultTextView;
         setContentView(R.layout.activity_next);
-        resultTextView = findViewById(R.id.text_View);
-        RangeSlider rangeSlider = findViewById(R.id.rangeSlider);
+        resultTextView = findViewById(R.id.result_Text_View);
+        RangeSlider rangeSlider = findViewById(R.id.range_seek_bar);
 
         rangeSlider.setValues(0f, 100f);
         double result = getIntent().getDoubleExtra("result", 0);

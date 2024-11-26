@@ -23,10 +23,11 @@
             android:gravity="center_horizontal"
             android:padding="10dp"
             android:text="@string/next"
-            android:textColorHint="@color/white"
+            android:backgroundTint="@color/grey"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:visibility="gone"
+            android:visibility="visible"
             android:onClick="onHiddenButtonClick"/>
 
         <HorizontalScrollView

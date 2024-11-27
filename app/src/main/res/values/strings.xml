@@ -19,4 +19,14 @@
     <string name="_0">0</string>
     <string name="point">.</string>
     <string name="result">=</string>
+    <string name="next">NEXT</string>
+    <string name="category">Category</string>
+    <string name="free">free</string>
+    <string name="btn_next">Next</string>
+    <string name="participants">Participants</string>
+    <string name="price">Price</string>
+    <string name="accessebility">Accessebility</string>
+    <string name="category_2">Category</string>
+    <string name="accessebility_2">Accessebility</string>
+    <string name="price_2">Price</string>
 </resources>

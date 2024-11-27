@@ -108,4 +108,5 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("result", result);
         startActivity(intent);
     }
+
 }

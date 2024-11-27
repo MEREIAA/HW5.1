@@ -2,6 +2,7 @@ package com.example.hw51;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -37,6 +38,8 @@ public class NextActivity extends AppCompatActivity {
             List<Float> values = slider.getValues();
             System.out.println("Current values: " + values);
 
+            TextView buttonCategory = findViewById(R.id.button_category);
+            buttonCategory.setVisibility(View.GONE);
         });
     }
 }

@@ -10,6 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:text="@string/price_2"
         android:textColor="@color/white"
         android:textSize="12sp"
@@ -19,6 +20,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:text="@string/accessebility_2"
         android:textColor="@color/white"
         android:textSize="12sp"
@@ -99,14 +101,15 @@
         android:id="@+id/result_Text_View"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
         android:gravity="center"
         android:text="@string/result"
         android:textSize="18sp"
-        android:layout_marginTop="140dp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -128,13 +131,20 @@
     <TextView
         android:layout_width="24dp"
         android:layout_height="24dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginBottom="750dp"
         android:background="@drawable/heart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="330dp"
         tools:layout_editor_absoluteY="72dp" />
 
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="160dp"
@@ -147,6 +157,7 @@
         tools:ignore="SmallSp" />
 
     <ImageView
+        android:id="@+id/icon_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="300dp"
@@ -189,14 +200,19 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="88dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="175dp"
+        android:elevation="4dp"
         android:text="@string/participants"
         android:textColor="@color/black"
         android:textSize="10sp"
+
         app:layout_constraintBottom_toTopOf="@id/bottom_next"
-        app:layout_constraintEnd_toEndOf="@id/bottom_next"
-        app:layout_constraintStart_toStartOf="@id/bottom_next"
-        tools:ignore="SmallSp" />
+        app:layout_constraintEnd_toStartOf="@id/textView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icon_3" />
 
     <TextView
         android:id="@+id/text_free"

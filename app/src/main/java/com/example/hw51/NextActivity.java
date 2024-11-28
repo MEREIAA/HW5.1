@@ -60,8 +60,6 @@ public class NextActivity extends AppCompatActivity {
             System.out.println("Current values: " + values);
         });
 
-
-
         TextView buttonCategory = findViewById(R.id.button_category);
         buttonCategory.setOnClickListener(v -> {
             if (isCategoryPressed) {
@@ -74,5 +72,18 @@ public class NextActivity extends AppCompatActivity {
             isCategoryPressed = !isCategoryPressed;
         });
         buttonCategory.setVisibility(View.VISIBLE);
+
+        ImageView buttonHeart = findViewById(R.id.heartImageView);
+        buttonHeart.setOnClickListener(v -> {
+            if (isHeartPressed) {
+                heartImageView.setImageResource(R.drawable.heart);
+                buttonCategory.setBackgroundResource(R.drawable.bg_button2);
+            } else {
+                heartImageView.setImageResource(R.drawable.heartpressed);
+                buttonCategory.setBackgroundResource(R.drawable.bg_button3);
+            }
+            isHeartPressed = !isHeartPressed;
+        });
+        buttonHeart.setVisibility(View.VISIBLE);
     }
 }

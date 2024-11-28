@@ -1,24 +1,36 @@
 package com.example.hw51;
 
+import static com.example.hw51.R.*;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.snackbar.Snackbar;
+import com.example.hw51.R;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
     private Double first, second, result;
     private String currentOperation;
     private Boolean isOperationOnClick;
+    private Button hiddenButton;
+
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        textView = findViewById(R.id.text_view);
+        setContentView(layout.activity_main);
+        textView = findViewById(id.text_View);
+        hiddenButton = findViewById(R.id.btn_hidden);
+        hiddenButton.setVisibility(View.GONE);
         currentOperation = "";
     }
 
@@ -44,8 +56,10 @@ public class MainActivity extends AppCompatActivity {
             textView.append(textButton);
         }
         isOperationOnClick = false;
+        hiddenButton.setVisibility(View.GONE);
     }
 
+    @SuppressLint("SetTextI18n")
     public void onOperationClick(View view) {
         isOperationOnClick = true;
         if (view.getId() == R.id.btn_plus) {
@@ -75,9 +89,8 @@ public class MainActivity extends AppCompatActivity {
             }
             if (result % 1 == 0) {
                 textView.setText(String.valueOf(result.intValue()));
-            } else {
-                textView.setText(result.toString());
-            }
+            } else textView.setText(result.toString());
+            hiddenButton.setVisibility(View.VISIBLE);
             first = null;
             second = null;
             currentOperation = "";
@@ -86,9 +99,14 @@ public class MainActivity extends AppCompatActivity {
             first = Double.valueOf(textView.getText().toString());
             currentOperation = "%";
         } else if (view.getId() == R.id.btn_plus_minus) {
-            double value = Double.valueOf(textView.getText().toString());
-            value = value * -1;
-            textView.setText(String.valueOf(value));
+            Snackbar.make(view, "ЧТО ОН ДОЛЖЕН ДЕЛАТЬ ? ", Snackbar.LENGTH_LONG).show();
         }
     }
+
+    public void onHiddenButtonClick(View view) {
+        Intent intent = new Intent(MainActivity.this, NextActivity.class);
+        intent.putExtra("result", result);
+        startActivity(intent);
+    }
+
 }

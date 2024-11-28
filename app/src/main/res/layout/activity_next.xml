@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_gray"
+    tools:context=".NextActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/price_2"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/range_seek_bar"
+        app:layout_constraintStart_toStartOf="@id/range_seek_bar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="@string/accessebility_2"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/range_seek_bar2"
+        app:layout_constraintStart_toStartOf="@id/range_seek_bar2" />
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/range_seek_bar"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        app:layout_constraintBottom_toBottomOf="@id/dropdown_menu"
+        app:layout_constraintStart_toEndOf="@id/dropdown_menu"
+        app:layout_constraintTop_toTopOf="@id/dropdown_menu"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.slider.RangeSlider
+        android:id="@+id/range_seek_bar2"
+        android:layout_width="178dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:valueFrom="0.0"
+        android:valueTo="100.0"
+        app:layout_constraintEnd_toEndOf="@id/range_seek_bar"
+        app:layout_constraintStart_toStartOf="@id/range_seek_bar"
+        app:layout_constraintTop_toBottomOf="@id/range_seek_bar"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bottom_next"
+        style="@style/GradientButtonStyle"
+        android:layout_width="342dp"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/gradient_button"
+        android:text="@string/next"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewWhite"
+        android:layout_width="344dp"
+        android:layout_height="208dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/rounded"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="81dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginBottom="450dp"
+        android:background="@drawable/image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_ex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/result"
+        android:textColor="@color/black"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/gradient"
+        android:layout_width="81dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="220sp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="@id/text_ex"
+        app:layout_constraintStart_toStartOf="@id/text_ex"
+        app:layout_constraintTop_toBottomOf="@id/text_ex" />
+
+    <TextView
+        android:id="@+id/result_Text_View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:gravity="center"
+        android:text="@string/result"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/button_category"
+        android:layout_width="88dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/bg_button2"
+        android:gravity="center"
+        android:text="@string/category"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/heartImageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginBottom="750dp"
+        android:background="@drawable/heart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="330dp"
+        tools:layout_editor_absoluteY="72dp" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:text="@string/accessebility"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/gradient"
+        app:layout_constraintStart_toStartOf="@id/gradient"
+        app:layout_constraintTop_toBottomOf="@id/gradient"
+        tools:ignore="SmallSp" />
+
+    <ImageView
+        android:id="@+id/icon_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="46dp"
+        android:src="@drawable/user_icon_1"
+        app:layout_constraintBottom_toBottomOf="@id/gradient"
+        app:layout_constraintEnd_toStartOf="@id/gradient"
+        app:layout_constraintTop_toTopOf="@id/gradient" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/user_icon_2"
+        app:layout_constraintBottom_toBottomOf="@id/gradient"
+        app:layout_constraintEnd_toStartOf="@id/gradient"
+        app:layout_constraintTop_toTopOf="@id/gradient" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="107dp"
+        android:src="@drawable/user_icon_3"
+        app:layout_constraintBottom_toBottomOf="@id/gradient"
+        app:layout_constraintEnd_toStartOf="@id/gradient"
+        app:layout_constraintTop_toTopOf="@id/gradient" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="76dp"
+        android:src="@drawable/user_icon_4"
+        app:layout_constraintBottom_toBottomOf="@id/gradient"
+        app:layout_constraintEnd_toStartOf="@id/gradient"
+        app:layout_constraintTop_toTopOf="@id/gradient" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="175dp"
+        android:elevation="4dp"
+        android:text="@string/participants"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_next"
+        app:layout_constraintEnd_toStartOf="@id/textView"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icon_3" />
+
+    <TextView
+        android:id="@+id/text_free"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="195dp"
+        android:layout_marginEnd="230dp"
+        android:text="@string/free"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/text_ex"
+        app:layout_constraintStart_toStartOf="@id/text_ex"
+        app:layout_constraintTop_toBottomOf="@id/text_ex" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/price"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@id/text_free"
+        app:layout_constraintTop_toBottomOf="@id/text_free"
+        tools:ignore="SmallSp" />
+
+
+    <Spinner
+        android:id="@+id/dropdown_menu"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_2"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="@id/bottom_next"
+        app:layout_constraintTop_toBottomOf="@id/bottom_next" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/category_2"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/dropdown_menu"
+        app:layout_constraintStart_toStartOf="@id/dropdown_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

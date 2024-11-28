@@ -29,4 +29,13 @@
     <string name="category_2">Category</string>
     <string name="accessebility_2">Accessebility</string>
     <string name="price_2">Price</string>
+    <string-array name="choice_color">
+        <item>Black</item>
+        <item>White</item>
+        <item>Gray</item>
+    </string-array>
+    <array name="initial_slider_values">
+        <item>10.0</item>
+        <item>50.0</item>
+    </array>
 </resources>

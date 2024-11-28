@@ -51,11 +51,13 @@
         app:layout_constraintTop_toBottomOf="@id/range_seek_bar"
         tools:ignore="MissingConstraints" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@drawable/gradient_button"
         android:id="@+id/bottom_next"
+        style="@style/GradientButtonStyle"
         android:layout_width="342dp"
         android:layout_height="48dp"
-        android:background="@drawable/bg_button"
+        android:layout_margin="16dp"
         android:text="@string/next"
         android:textAllCaps="false"
         android:textColor="@color/white"
@@ -122,13 +124,14 @@
         android:text="@string/category"
         android:textAllCaps="false"
         android:textColor="@color/white"
+        android:visibility="visible"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <TextView
+    <ImageView
+        android:id="@+id/heartImageView"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="280dp"
@@ -204,15 +207,14 @@
         android:layout_marginTop="25dp"
         android:layout_marginBottom="175dp"
         android:elevation="4dp"
-        android:text="@string/participants"
         android:textColor="@color/black"
         android:textSize="10sp"
-
         app:layout_constraintBottom_toTopOf="@id/bottom_next"
         app:layout_constraintEnd_toStartOf="@id/textView"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/icon_3" />
+        app:layout_constraintTop_toTopOf="@id/icon_3"
+        android:text="@string/participants"/>
 
     <TextView
         android:id="@+id/text_free"
